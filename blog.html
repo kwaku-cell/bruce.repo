@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="blog-title">Blog Title</h1>
+    </header>
+    <main>
+        <article id="blog-content">
+            <!-- Blog content will be inserted here -->
+             
+        </article>
+        <a href="index.html">Back to Home</a>
+    </main>
+
+    <script>
+        // Fetch URL Parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get('id');
+
+       
+            // Sample Blog Data
+const blogs = [
+    { id: 1, title: "The Power of Habit", content: "Discover the science behind habit formation and how you can take control of your daily routine to build better habits." },
+    { id: 2, title: "Why AI is the Future", content: "Artificial Intelligence is revolutionizing industries from healthcare to finance, and it's just the beginning." },
+    { id: 3, title: "Web Development Trends in 2025", content: "Explore the latest trends in front-end and back-end web development, including AI-powered design and serverless architecture." },
+    { id: 4, title: "How to Stay Motivated", content: "Daily habits, goal-setting strategies, and mental frameworks to keep you inspired and productive." },
+    { id: 5, title: "The Rise of Quantum Computing", content: "Quantum computing is set to redefine problem-solving with its immense processing power. Here's what you need to know." },
+    { id: 6, title: "The Future of Remote Work", content: "How hybrid workplaces, digital collaboration, and AI-driven productivity tools are shaping the future of work." },
+    { id: 7, title: "Cybersecurity in the Digital Age", content: "With increasing cyber threats, understanding cybersecurity best practices has never been more important." },
+    { id: 8, title: "Building a Successful Startup", content: "Key lessons from successful entrepreneurs on launching and scaling a startup in a competitive market." },
+    { id: 9, title: "The Psychology of Productivity", content: "Unlock the secrets of peak performance with psychology-backed productivity hacks." },
+    { id: 10, title: "Sustainable Technology Innovations", content: "Discover how green tech is revolutionizing industries, reducing carbon footprints, and promoting sustainability." }
+];
+
+
+        // Find and Display Blog
+        const blog = blogs.find(b => b.id == blogId);
+        if (blog) {
+            document.getElementById("blog-title").innerText = blog.title;
+            document.getElementById("blog-content").innerText = blog.content;
+        } else {
+            document.getElementById("blog-content").innerText = "Blog post not found.";
+        }
+    </script>
+</body>
+</html>
