@@ -25,18 +25,61 @@
 
        
             // Sample Blog Data
-const blogs = [
-    { id: 1, title: "The Power of Habit", content: "Discover the science behind habit formation and how you can take control of your daily routine to build better habits." },
-    { id: 2, title: "Why AI is the Future", content: "Artificial Intelligence is revolutionizing industries from healthcare to finance, and it's just the beginning." },
-    { id: 3, title: "Web Development Trends in 2025", content: "Explore the latest trends in front-end and back-end web development, including AI-powered design and serverless architecture." },
-    { id: 4, title: "How to Stay Motivated", content: "Daily habits, goal-setting strategies, and mental frameworks to keep you inspired and productive." },
-    { id: 5, title: "The Rise of Quantum Computing", content: "Quantum computing is set to redefine problem-solving with its immense processing power. Here's what you need to know." },
-    { id: 6, title: "The Future of Remote Work", content: "How hybrid workplaces, digital collaboration, and AI-driven productivity tools are shaping the future of work." },
-    { id: 7, title: "Cybersecurity in the Digital Age", content: "With increasing cyber threats, understanding cybersecurity best practices has never been more important." },
-    { id: 8, title: "Building a Successful Startup", content: "Key lessons from successful entrepreneurs on launching and scaling a startup in a competitive market." },
-    { id: 9, title: "The Psychology of Productivity", content: "Unlock the secrets of peak performance with psychology-backed productivity hacks." },
-    { id: 10, title: "Sustainable Technology Innovations", content: "Discover how green tech is revolutionizing industries, reducing carbon footprints, and promoting sustainability." }
-];
+const blogs = 
+[
+    {
+        "id": 1,
+        "title": "The Power of Habit",
+        "content": "Discover the science behind habit formation and how you can take control of your daily routine to build better habits. Habits shape nearly 40% of our daily actions, often without conscious thought. Understanding how habits work—the cue, routine, and reward loop—can help you break bad habits and develop new, positive ones. Whether you're trying to exercise more, improve productivity, or adopt healthier eating patterns, mastering habit formation is the key. This book explores real-life examples, neuroscience insights, and practical strategies to help you take charge of your habits and ultimately, your life. By leveraging small but consistent changes, you can rewire your brain, making positive behaviors automatic and long-lasting."
+    },
+    {
+        "id": 2,
+        "title": "Why AI is the Future",
+        "content": "Artificial Intelligence is revolutionizing industries from healthcare to finance, and it's just the beginning. AI-powered systems are enhancing medical diagnoses, automating financial transactions, improving customer service, and even optimizing supply chains. With advancements in machine learning, natural language processing, and robotics, AI is becoming more efficient and capable of performing complex tasks that once required human intelligence. As businesses and individuals continue to adopt AI-driven solutions, the technology will reshape the workforce, redefine productivity, and unlock new opportunities for innovation. The future of AI holds immense potential, from self-driving cars to intelligent personal assistants, making it one of the most transformative technologies of our time. As ethical considerations and regulations evolve, AI will also raise important discussions about privacy, bias, and job automation."
+    },
+    {
+        "id": 3,
+        "title": "Web Development Trends in 2025",
+        "content": "Explore the latest trends in front-end and back-end web development, including AI-powered design and serverless architecture. As technology rapidly evolves, developers are embracing frameworks like Next.js and Svelte for improved performance and seamless user experiences. Low-code and no-code platforms are making web development more accessible, allowing businesses to build applications faster. The rise of Web3 and blockchain integration is opening new possibilities for decentralized applications, while progressive web apps (PWAs) continue to bridge the gap between websites and native mobile apps. Security remains a priority, with developers implementing zero-trust architectures and stronger authentication methods. Keeping up with these trends will be crucial for businesses and developers alike."
+    },
+    {
+        "id": 4,
+        "title": "How to Stay Motivated",
+        "content": "Daily habits, goal-setting strategies, and mental frameworks to keep you inspired and productive. Motivation fluctuates, but developing self-discipline and creating a structured routine can help sustain long-term progress. Setting SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals and breaking them into smaller, manageable tasks can make daunting projects feel more achievable. Additionally, surrounding yourself with a supportive community, visualizing success, and celebrating small wins can reinforce motivation. Understanding the psychology behind motivation—such as intrinsic vs. extrinsic motivation—can also help you identify what truly drives you. By adopting a growth mindset and embracing challenges, you can turn setbacks into learning opportunities and maintain a steady drive toward your goals."
+    },
+    {
+        "id": 5,
+        "title": "The Rise of Quantum Computing",
+        "content": "Quantum computing is set to redefine problem-solving with its immense processing power. Here's what you need to know. Unlike classical computers, which process data in binary (0s and 1s), quantum computers use qubits that exist in multiple states simultaneously, enabling exponential computational speedups. This has profound implications for fields such as cryptography, drug discovery, and complex simulations. Companies like Google, IBM, and startups are racing to build practical quantum computers, while researchers continue to work on error correction and stability challenges. Although still in its early stages, quantum computing could revolutionize industries and solve problems currently beyond the reach of classical computing."
+    },
+    {
+        "id": 6,
+        "title": "The Future of Remote Work",
+        "content": "How hybrid workplaces, digital collaboration, and AI-driven productivity tools are shaping the future of work. The shift toward remote work has accelerated, with companies adopting flexible work models to improve work-life balance and employee satisfaction. AI-powered tools, such as virtual assistants and automated project management platforms, are streamlining workflows and enhancing communication among distributed teams. Virtual and augmented reality (VR/AR) are being explored to create immersive remote meeting experiences. However, challenges such as cybersecurity, employee engagement, and maintaining company culture remain critical considerations. As technology continues to advance, businesses must adapt to new ways of working while fostering collaboration and productivity."
+    },
+    {
+        "id": 7,
+        "title": "Cybersecurity in the Digital Age",
+        "content": "With increasing cyber threats, understanding cybersecurity best practices has never been more important. As cybercriminals develop more sophisticated attacks, businesses and individuals must prioritize data protection, encryption, and multi-factor authentication. Ransomware, phishing attacks, and social engineering tactics are on the rise, making cybersecurity awareness essential. Governments and organizations are investing in AI-driven threat detection and zero-trust security frameworks to mitigate risks. Keeping software and systems updated, using strong passwords, and educating employees about cybersecurity risks can significantly reduce vulnerabilities. As our digital footprint expands, proactive security measures will be vital to safeguarding sensitive information."
+    },
+    {
+        "id": 8,
+        "title": "Building a Successful Startup",
+        "content": "Key lessons from successful entrepreneurs on launching and scaling a startup in a competitive market. From validating your idea to securing funding and assembling a strong team, building a startup requires strategic planning and resilience. Customer-centric approaches, lean methodologies, and rapid iteration are crucial for early-stage growth. Effective branding, digital marketing, and networking can also play a significant role in gaining traction. While startups face challenges such as financial constraints and market competition, embracing adaptability and learning from failures can lead to long-term success. Surrounding yourself with mentors and industry experts can provide valuable insights to navigate the entrepreneurial journey."
+    },
+    {
+        "id": 9,
+        "title": "The Psychology of Productivity",
+        "content": "Unlock the secrets of peak performance with psychology-backed productivity hacks. Understanding cognitive biases, time management techniques, and the impact of environment on focus can help optimize efficiency. Methods like the Pomodoro Technique, time blocking, and deep work principles enable individuals to maximize their output while minimizing distractions. Psychological factors, such as intrinsic motivation, stress management, and the power of habits, influence productivity levels. By leveraging behavioral psychology, individuals can develop systems that promote consistency and avoid burnout. Learning how to work smarter, not harder, is essential for sustaining long-term productivity and achieving personal and professional goals."
+    },
+    {
+        "id": 10,
+        "title": "Sustainable Technology Innovations",
+        "content": "Discover how green tech is revolutionizing industries, reducing carbon footprints, and promoting sustainability. Innovations such as renewable energy sources, electric vehicles, smart grids, and eco-friendly materials are transforming how we consume resources. Companies are increasingly adopting circular economy models to minimize waste and enhance sustainability. Advances in artificial intelligence and data analytics are also helping optimize energy efficiency and reduce environmental impact. Governments and organizations worldwide are setting ambitious sustainability goals, driving investment in clean technologies. As climate concerns continue to grow, integrating sustainability into technology and business practices will be crucial for a greener future."
+    }
+]
+
+   
 
 
         // Find and Display Blog
