@@ -5,89 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+        h1 {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+        a:hover {
+            background: #0056b3;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .search-container input {
+            padding: 12px;
+            width: 60%;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-container button {
+            padding: 12px 18px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .search-container button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1 id="blog-title">Blog Title</h1>
+        <h1 id="blog-title">Loading...</h1>
     </header>
     <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search blog title...">
+            <button onclick="searchBlog()">Search</button>
+        </div>
         <article id="blog-content">
-            <!-- Blog content will be inserted here -->
-             
+            <p>Loading blog content...</p>
         </article>
         <a href="index.html">Back to Home</a>
     </main>
 
     <script>
-        // Fetch URL Parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const blogId = urlParams.get('id');
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const blogId = urlParams.get('id');
 
-       
-            // Sample Blog Data
-const blogs = 
-[
-    {
-        "id": 1,
-        "title": "The Power of Habit",
-        "content": "Discover the science behind habit formation and how you can take control of your daily routine to build better habits. Habits shape nearly 40% of our daily actions, often without conscious thought. Understanding how habits work—the cue, routine, and reward loop—can help you break bad habits and develop new, positive ones. Whether you're trying to exercise more, improve productivity, or adopt healthier eating patterns, mastering habit formation is the key. This book explores real-life examples, neuroscience insights, and practical strategies to help you take charge of your habits and ultimately, your life. By leveraging small but consistent changes, you can rewire your brain, making positive behaviors automatic and long-lasting."
-    },
-    {
-        "id": 2,
-        "title": "Why AI is the Future",
-        "content": "Artificial Intelligence is revolutionizing industries from healthcare to finance, and it's just the beginning. AI-powered systems are enhancing medical diagnoses, automating financial transactions, improving customer service, and even optimizing supply chains. With advancements in machine learning, natural language processing, and robotics, AI is becoming more efficient and capable of performing complex tasks that once required human intelligence. As businesses and individuals continue to adopt AI-driven solutions, the technology will reshape the workforce, redefine productivity, and unlock new opportunities for innovation. The future of AI holds immense potential, from self-driving cars to intelligent personal assistants, making it one of the most transformative technologies of our time. As ethical considerations and regulations evolve, AI will also raise important discussions about privacy, bias, and job automation."
-    },
-    {
-        "id": 3,
-        "title": "Web Development Trends in 2025",
-        "content": "Explore the latest trends in front-end and back-end web development, including AI-powered design and serverless architecture. As technology rapidly evolves, developers are embracing frameworks like Next.js and Svelte for improved performance and seamless user experiences. Low-code and no-code platforms are making web development more accessible, allowing businesses to build applications faster. The rise of Web3 and blockchain integration is opening new possibilities for decentralized applications, while progressive web apps (PWAs) continue to bridge the gap between websites and native mobile apps. Security remains a priority, with developers implementing zero-trust architectures and stronger authentication methods. Keeping up with these trends will be crucial for businesses and developers alike."
-    },
-    {
-        "id": 4,
-        "title": "How to Stay Motivated",
-        "content": "Daily habits, goal-setting strategies, and mental frameworks to keep you inspired and productive. Motivation fluctuates, but developing self-discipline and creating a structured routine can help sustain long-term progress. Setting SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals and breaking them into smaller, manageable tasks can make daunting projects feel more achievable. Additionally, surrounding yourself with a supportive community, visualizing success, and celebrating small wins can reinforce motivation. Understanding the psychology behind motivation—such as intrinsic vs. extrinsic motivation—can also help you identify what truly drives you. By adopting a growth mindset and embracing challenges, you can turn setbacks into learning opportunities and maintain a steady drive toward your goals."
-    },
-    {
-        "id": 5,
-        "title": "The Rise of Quantum Computing",
-        "content": "Quantum computing is set to redefine problem-solving with its immense processing power. Here's what you need to know. Unlike classical computers, which process data in binary (0s and 1s), quantum computers use qubits that exist in multiple states simultaneously, enabling exponential computational speedups. This has profound implications for fields such as cryptography, drug discovery, and complex simulations. Companies like Google, IBM, and startups are racing to build practical quantum computers, while researchers continue to work on error correction and stability challenges. Although still in its early stages, quantum computing could revolutionize industries and solve problems currently beyond the reach of classical computing."
-    },
-    {
-        "id": 6,
-        "title": "The Future of Remote Work",
-        "content": "How hybrid workplaces, digital collaboration, and AI-driven productivity tools are shaping the future of work. The shift toward remote work has accelerated, with companies adopting flexible work models to improve work-life balance and employee satisfaction. AI-powered tools, such as virtual assistants and automated project management platforms, are streamlining workflows and enhancing communication among distributed teams. Virtual and augmented reality (VR/AR) are being explored to create immersive remote meeting experiences. However, challenges such as cybersecurity, employee engagement, and maintaining company culture remain critical considerations. As technology continues to advance, businesses must adapt to new ways of working while fostering collaboration and productivity."
-    },
-    {
-        "id": 7,
-        "title": "Cybersecurity in the Digital Age",
-        "content": "With increasing cyber threats, understanding cybersecurity best practices has never been more important. As cybercriminals develop more sophisticated attacks, businesses and individuals must prioritize data protection, encryption, and multi-factor authentication. Ransomware, phishing attacks, and social engineering tactics are on the rise, making cybersecurity awareness essential. Governments and organizations are investing in AI-driven threat detection and zero-trust security frameworks to mitigate risks. Keeping software and systems updated, using strong passwords, and educating employees about cybersecurity risks can significantly reduce vulnerabilities. As our digital footprint expands, proactive security measures will be vital to safeguarding sensitive information."
-    },
-    {
-        "id": 8,
-        "title": "Building a Successful Startup",
-        "content": "Key lessons from successful entrepreneurs on launching and scaling a startup in a competitive market. From validating your idea to securing funding and assembling a strong team, building a startup requires strategic planning and resilience. Customer-centric approaches, lean methodologies, and rapid iteration are crucial for early-stage growth. Effective branding, digital marketing, and networking can also play a significant role in gaining traction. While startups face challenges such as financial constraints and market competition, embracing adaptability and learning from failures can lead to long-term success. Surrounding yourself with mentors and industry experts can provide valuable insights to navigate the entrepreneurial journey."
-    },
-    {
-        "id": 9,
-        "title": "The Psychology of Productivity",
-        "content": "Unlock the secrets of peak performance with psychology-backed productivity hacks. Understanding cognitive biases, time management techniques, and the impact of environment on focus can help optimize efficiency. Methods like the Pomodoro Technique, time blocking, and deep work principles enable individuals to maximize their output while minimizing distractions. Psychological factors, such as intrinsic motivation, stress management, and the power of habits, influence productivity levels. By leveraging behavioral psychology, individuals can develop systems that promote consistency and avoid burnout. Learning how to work smarter, not harder, is essential for sustaining long-term productivity and achieving personal and professional goals."
-    },
-    {
-        "id": 10,
-        "title": "Sustainable Technology Innovations",
-        "content": "Discover how green tech is revolutionizing industries, reducing carbon footprints, and promoting sustainability. Innovations such as renewable energy sources, electric vehicles, smart grids, and eco-friendly materials are transforming how we consume resources. Companies are increasingly adopting circular economy models to minimize waste and enhance sustainability. Advances in artificial intelligence and data analytics are also helping optimize energy efficiency and reduce environmental impact. Governments and organizations worldwide are setting ambitious sustainability goals, driving investment in clean technologies. As climate concerns continue to grow, integrating sustainability into technology and business practices will be crucial for a greener future."
-    }
-]
+            const blogs = [
+                { id: 1, title: "The Power of Habit", content: "Discover the science behind habit formation and how you can take control of your daily routine. Learn more from <a href='https://jamesclear.com/habit-guide' target='_blank'>this guide</a>." },
+                { id: 2, title: "Why AI is the Future", content: "Artificial Intelligence is transforming industries. Read more at <a href='https://www.forbes.com/sites/forbestechcouncil/2023/10/15/why-ai-is-the-future' target='_blank'>Forbes AI Insights</a>." },
+                { id: 3, title: "Web Development Trends in 2025", content: "The latest web development trends include AI-powered design and blockchain integration. Stay updated with <a href='https://www.smashingmagazine.com/category/web-development' target='_blank'>Smashing Magazine</a>." },
+                { id: 4, title: "The Future of Blockchain", content: "Explore how blockchain is revolutionizing industries from finance to healthcare. Learn more at <a href='https://blockgeeks.com/guides/what-is-blockchain-technology/' target='_blank'>Blockgeeks</a>." },
+                { id: 5, title: "Cybersecurity in 2025", content: "With increasing threats, cybersecurity is more important than ever. Read best practices at <a href='https://www.cybersecurity-insiders.com' target='_blank'>Cybersecurity Insiders</a>." },
+                { id: 6, title: "The Future of Remote Work", content: "Hybrid workplaces and digital collaboration tools are changing how we work. Read more at <a href='https://hbr.org/2023/08/the-future-of-remote-work' target='_blank'>Harvard Business Review</a>." },
+                { id: 7, title: "Sustainable Technology Innovations", content: "Discover how green tech is revolutionizing industries. Read more at <a href='https://www.greenbiz.com/' target='_blank'>GreenBiz</a>." },
+                { id: 8, title: "The Psychology of Productivity", content: "Unlock the secrets of peak performance with psychology-backed productivity hacks. Read more at <a href='https://jamesclear.com/productivity' target='_blank'>James Clear</a>." },
+                { id: 9, title: "The Rise of Quantum Computing", content: "Quantum computing is set to redefine problem-solving with its immense processing power. Learn more at <a href='https://quantumai.google/' target='_blank'>Google Quantum AI</a>." }
+            ];
 
+            function displayBlog(blog) {
+                document.getElementById("blog-title").innerText = blog.title;
+                document.getElementById("blog-content").innerHTML = `<p>${blog.content}</p>`;
+            }
 
-        // Find and Display Blog
-        const blog = blogs.find(b => b.id == blogId);
-        if (blog) {
-            document.getElementById("blog-title").innerText = blog.title;
-            document.getElementById("blog-content").innerText = blog.content;
-        } else {
-            document.getElementById("blog-content").innerText = "Blog post not found.";
-        }
+            const blog = blogs.find(b => b.id == blogId);
+            if (blog) {
+                displayBlog(blog);
+            } else {
+                document.getElementById("blog-content").innerHTML = "<p>Blog post not found.</p>";
+            }
+
+            window.searchBlog = function () {
+                const query = document.getElementById("search-input").value.toLowerCase();
+                const foundBlog = blogs.find(b => b.title.toLowerCase().includes(query));
+                if (foundBlog) {
+                    displayBlog(foundBlog);
+                } else {
+                    document.getElementById("blog-content").innerHTML = "<p>No matching blog found.</p>";
+                }
+            };
+        });
     </script>
 </body>
 </html>
