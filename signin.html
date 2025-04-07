@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back - Medium</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .button img {
+            width: 20px;
+            height: 20px;
+        }
+        .google-btn { background-color: #fff; border: 1px solid #ddd; }
+        .facebook-btn { background-color: #fff; border: 1px solid #ddd; }
+        .apple-btn { background-color: #fff; border: 1px solid #ddd; }
+        .x-btn { background-color: #fff; border: 1px solid #ddd; }
+        .email-btn { background-color: #fff; border: 1px solid #ddd; }
+        .signup-link { margin-top: 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome back.</h1>
+        <button class="button google-btn">
+            <img src="google-logo.png" alt="Google"> Sign in with Google
+        </button>
+        <button class="button facebook-btn">
+            <img src="facebook-logo.png" alt="Facebook"> Sign in with Facebook
+        </button>
+        <button class="button apple-btn">
+            <img src="apple-logo.png" alt="Apple"> Sign in with Apple
+        </button>
+        <button class="button x-btn">
+            <img src="x-logo.png" alt="X"> Sign in with X
+        </button>
+        <button class="button email-btn">
+            <img src="email-logo.png" alt="Email"> Sign in with email
+        </button>
+        <p>No account? <a href="signup.html">Create one</a></p>
+        <p>Forgot password? <a href="#">Get help</a></p>
+    </div>
+    <script>
+        function signInWith(provider) {
+            alert('Signing in with ' + provider);
+            // Implement authentication logic here (e.g., OAuth, API call, etc.)
+        }
+        function signInWithEmail() {
+            const email = prompt('Enter your email:');
+            if (email) {
+                alert('Signing in with email: ' + email);
+                // Implement email authentication logic here
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

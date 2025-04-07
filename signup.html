@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Medium</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .button img {
+            width: 20px;
+            height: 20px;
+        }
+        .google-btn { background-color: #fff; border: 1px solid #ddd; }
+        .facebook-btn { background-color: #fff; border: 1px solid #ddd; }
+        .apple-btn { background-color: #fff; border: 1px solid #ddd; }
+        .x-btn { background-color: #fff; border: 1px solid #ddd; }
+        .email-btn { background-color: #fff; border: 1px solid #ddd; }
+        .signin-link { margin-top: 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Join Medium</h1>
+        <button class="button google-btn">
+            <img src="google-logo.png" alt="Google"> Sign up with Google
+        </button>
+        <button class="button facebook-btn">
+            <img src="facebook-logo.png" alt="Facebook"> Sign up with Facebook
+        </button>
+        <button class="button apple-btn">
+            <img src="apple-logo.png" alt="Apple"> Sign up with Apple
+        </button>
+        <button class="button x-btn">
+            <img src="x-logo.png" alt="X"> Sign up with X
+        </button>
+        <button class="button email-btn">
+            <img src="email-logo.png" alt="Email"> Sign up with email
+        </button>
+        <p>Already have an account? <a href="signin.html">Sign in</a></p>
+        
+    </div>
+    <script>
+        document.querySelector('.google-btn').addEventListener('click', () => signUpWith('Google'));
+        document.querySelector('.facebook-btn').addEventListener('click', () => signUpWith('Facebook'));
+        document.querySelector('.apple-btn').addEventListener('click', () => signUpWith('Apple'));
+        document.querySelector('.x-btn').addEventListener('click', () => signUpWith('X'));
+        document.querySelector('.email-btn').addEventListener('click', () => signUpWithEmail());
+    
+        function signUpWith(provider) {
+            alert('Signing up with ' + provider);
+            // Replace with actual sign-up logic
+        }
+    
+        function signUpWithEmail() {
+            const email = prompt('Enter your email:');
+            if (email) {
+                alert('Signing up with email: ' + email);
+                // Replace with actual email sign-up logic
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const blogList = document.getElementById("blog-list");
-    
-    const blogs = [
+
+const blogs = [
         { id: 1, title: "The Power of Habit", description: "How habits shape our lives.", image: "https://source.unsplash.com/700x400/?habit", author: "James Clear", date: "March 10, 2025", category: "Self-Improvement", content: "Discover the science behind habit formation and how you can take control of your daily routine. Learn more from <a href='https://jamesclear.com/habit-guide' target='_blank'>this guide</a>." },
         { id: 2, title: "Why AI is the Future", description: "AI is transforming industries.", image: "https://source.unsplash.com/700x400/?ai", author: "Elon Turing", date: "March 15, 2025", category: "Technology", content: "Artificial Intelligence is transforming industries. Read more at <a href='https://www.forbes.com/sites/forbestechcouncil/2023/10/15/why-ai-is-the-future' target='_blank'>Forbes AI Insights</a>." },
         { id: 3, title: "Web Development Trends in 2025", content: "The latest web development trends include AI-powered design and blockchain integration. Stay updated with <a href='https://www.smashingmagazine.com/category/web-development' target='_blank'>Smashing Magazine</a>." },
@@ -12,23 +12,27 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: 8, title: "The Psychology of Productivity", content: "Unlock the secrets of peak performance with psychology-backed productivity hacks. Read more at <a href='https://jamesclear.com/productivity' target='_blank'>James Clear</a>." },
         { id: 9, title: "The Rise of Quantum Computing", content: "Quantum computing is set to redefine problem-solving with its immense processing power. Learn more at <a href='https://quantumai.google/' target='_blank'>Google Quantum AI</a>." }
     ];
-    function displayBlogs() {
+    
+       function displayBlogs() {
         blogList.innerHTML = "";
         blogs.forEach(blog => {
             const blogItem = document.createElement("div");
             blogItem.classList.add("blog-post");
             blogItem.innerHTML = `
-                <img src="${blog.image}" alt="${blog.title}">
-                <div class="blog-info">
-                    <h2>${blog.title}</h2>
-                    <p class="meta">By ${blog.author} • ${blog.date}</p>
-                    <p>${blog.description}</p>
-                    <button class="like-btn" onclick="likePost(${blog.id})">Like</button>
-                    <a href="blog.html?id=${blog.id}" class="read-more">Read More →</a>
-                </div>
+                <img src="${blog.image}" alt="${blog.title}" style="width:100%; border-radius:8px; margin-bottom:10px;">
+                <h2 class="blog-title">${blog.title}</h2>
+                <p class="blog-meta">By ${blog.author} • ${blog.date}</p>
+                <p class="blog-content">${blog.description}</p>
+                <a href="blog.html?id=${blog.id}" class="read-more">Read More →</a>
             `;
             blogList.appendChild(blogItem);
         });
+       
+        function signInWith(provider) {
+            console.log('Signing in with', provider);
+            alert('Signing in with ' + provider);
+        }
+        
     }
 
     displayBlogs();
