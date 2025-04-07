@@ -75,17 +75,25 @@
         <p>Forgot password? <a href="#">Get help</a></p>
     </div>
     <script>
-        function signInWith(provider) {
-            alert('Signing in with ' + provider);
-            // Implement authentication logic here (e.g., OAuth, API call, etc.)
+        document.querySelector('.google-btn').addEventListener('click', () => signInWith('Google'));
+    document.querySelector('.facebook-btn').addEventListener('click', () => signInWith('Facebook'));
+    document.querySelector('.apple-btn').addEventListener('click', () => signInWith('Apple'));
+    document.querySelector('.x-btn').addEventListener('click', () => signInWith('X'));
+    document.querySelector('.email-btn').addEventListener('click', () => signInWithEmail());
+
+        
+    function signInWith(provider) {
+        alert('Signing in with ' + provider);
+        // Replace with actual authentication logic
+    }
+
+    function signInWithEmail() {
+        const email = prompt('Enter your email:');
+        if (email) {
+            alert('Signing in with email: ' + email);
+            // Replace with actual email sign-in logic
         }
-        function signInWithEmail() {
-            const email = prompt('Enter your email:');
-            if (email) {
-                alert('Signing in with email: ' + email);
-                // Implement email authentication logic here
-            }
-        }
+    }
     </script>
 </body>
 </html>
